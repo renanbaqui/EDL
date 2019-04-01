@@ -27,7 +27,7 @@ Seguem abaixo as outras linguaguens que influenciaram a criação do C++:
 * ML
 * Simula
 
-*Classificação*
+**Classificação**
 
 Podemos classificara linguagem C++ quanto aos seguintes aspectos:
 * Multi-paradigma
@@ -41,7 +41,7 @@ estruturada e programação orientada a objetos, que permite ao programador esco
 determinado problema. Intitulamos C++ como uma linguagem multiparadigmas por ter as características descritas acima.
 Outra característica é a tipagem estática, ou seja, a verificação do tipo de dado é feita em tempo de compilação.
 
-##Comparação
+**Comparação**
 
 ###Linguagem C                                       
 
