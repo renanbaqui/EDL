@@ -16,10 +16,10 @@ com classes", o predecessor do C++ em 1979. Stroustrup percebeu que a linguagem 
 para desenvolvilmente de programas grandes de software, mas era muito lenta para uso prático, enquanto o a linguagem BCPL era
 rápida, mas de muito baixo nível para ser aplicada em desenvolvimento de softwares grandes. Quando Stroustrup começou a
 trabalhar na AT&T Bell Labs, ele teve a tarefa de analizar o kernel do UNIX e, através de sua experiência no Ph.D., ele pode
-melhorar a linguagem C com caracteristicas do Simula. o cientista escolheu a linguagem C por ser de uso geral, rápida, e
-portátil e usada amplamente.
+melhorar a linguagem C com caracteristicas do Simula. O cientista escolheu a linguagem C por ser de uso geral, rápida, portátil
+e usada amplamente.
 
-Seguem abaixo as outras linguaguens que influenciaram a criação do C++: 
+Seguem abaixo todas as linguaguens que tiveram influencia na criação do C++: 
 * Ada
 * ALGOL 68
 * C
@@ -96,7 +96,8 @@ Multiparadigma
 			return 0;
 		}
 
-No código acima temos a implementação de uma classe que pega datas e imprime as mesmas. Em c++ esta implementação é melhor organizada do que na linguagem C. Isso faz com que se entenda o código mais facilmennte.
+No código acima temos a implementação de uma classe que pega datas e imprime as mesmas. Em c++ esta implementação é melhor
+organizada do que na linguagem C. Isso faz com que se entenda o código mais facilmente.
 
 - A classe "clock" é definida da seguinte maneira: 
 
@@ -142,22 +143,30 @@ uma vantagem para as demais linguagens.
         	 		void advance(); 
         };
 
-##Códigos representtivos
+**Exemplos de códigos representativos**
 C++ é uma linguagem de uso geral e já foi utilizada para diversas aplicações, como na lista a seguir:
 
-- Windows
-- Apple OsX
+- Microsoft Windows
+- Apple macOS
 - Beos
 - Solaris
-- Symbian(S.O para celulares)
-- Buca do Google
-- Sistema comercial da Amazon
-- Adobe(Photoshop, Illustrador)
-- Maya e autocad
-- Doom III
+- Symbian
+- Mozilla Firefox e Thunderbird
+- Google.com
+- YouTube.com
+- Amazon.com
+- Twitter.com
+- Adobe (Photoshop, Image Ready, Illustrator e Premier)
+- Source Engine (Half-Life, Left 4 Dead, TF2, Counter-Strike)
+- Creation Engine (Skyrim, Fallout 4, Oblivion)
 
-##Conclusão
+**Conclusão**
 
 C++ é uma das linguagens mais utilizadas do mundo, ocupando a 5° posição no ranking da Redmonk. Faz sucesso
 por ser uma linguagem multiparadigma e de uso geral. Um dos motivos para tal sucesso é a existência de várias
 possibilidades para resolver um determinado problema.
+
+https://en.wikipedia.org/wiki/C%2B%2B#Language
+https://www.quora.com/What-is-C++-used-for
+https://www.mycplus.com/featured-articles/top-10-applications-written-in-c-cplusplus/
+
