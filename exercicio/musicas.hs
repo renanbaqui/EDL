@@ -22,11 +22,16 @@ nome = map (\(a,_,_) -> a) musicas
 dois :: [Musica]
 dois = filter (\(_,_,c) -> c >= 120) musicas
 
---duracao :: [Int]
---duracao = foldr (\(_,_,k) aux -> if k > aux then k else aux)o musicas
+duracao :: Int
+montar (a,b,c) = c
+test = map montar musicas
+duracao = foldr (\(_,_,k) test -> if k>test then k else test) 0 musicas
+
 
 nomes2 :: [String]
 nomes2 = map (\(a,_,_) -> a) (filter (\(_,_,c) -> c >= 120) musicas)
 
---main = print (nome, dois, nomes2)
-main = print duracao
+main = do print nome  
+          print dois
+          print duracao
+          print nomes2
