@@ -27,7 +27,6 @@ montar (a,b,c) = c
 test = map montar musicas
 duracao = foldr (\(_,_,k) test -> if k>test then k else test) 0 musicas
 
-
 nomes2 :: [String]
 nomes2 = map (\(a,_,_) -> a) (filter (\(_,_,c) -> c >= 120) musicas)
 
