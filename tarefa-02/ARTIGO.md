@@ -30,20 +30,21 @@ Seguem abaixo todas as linguaguens que tiveram influencia na criação do C++:
 **Classificação**
 
 Podemos classificara linguagem C++ quanto aos seguintes aspectos:
+
 * Multi-paradigma
 * Procedural
 * Funcional
 * Orientada a objetos
 * Estática
 
-A linguagem C++ foi projetada para suportar múltiplos paradigmas de programação, principalmente programação 
+A linguagem C++ foi projetada para suportar diversos paradigmas de programação, principalmente programação 
 estruturada e programação orientada a objetos, que permite ao programador escolher a melhor solução para um
-determinado problema. Intitulamos C++ como uma linguagem multiparadigmas por ter as características descritas acima.
-Outra característica é a tipagem estática, ou seja, a verificação do tipo de dado é feita em tempo de compilação.
+determinado problema. C++ é uma linguagem multiparadigmas por ter as características descritas acima. Outra característica 
+é a tipagem estática, ou seja, a verificação do tipo de dado é feita em tempo de compilação.
 
 **Comparação**
 
-###Linguagem C                                       
+* Linguagem C                                       
 
 Programação estruturada 
 
@@ -52,10 +53,10 @@ Programação estruturada
     #include<stdio.h>				
 	  int main()						
 	  {						
-	     printf("Hello, World\n!");		
+	     printf("Olá Mundo!\n!");		
     }			
     
-###Linguagem C++
+* Linguagem C++
 
 Multiparadigma
 
@@ -64,11 +65,12 @@ Multiparadigma
     #include<iostream>
     int main()
     {
-        std::cout<<"Hello, world!"<<"\n";
+        std::cout<<"Olá Mundo!"<<"\n";
     }
-   **As linguagens descritas acima tem sintaxe diferente e semântica igual.**
+   
+   **Nos casos acima a semântica é igual e a sintaxe diferente.**
 
-##Vantagens
+* Vantagens
 		#include <iostream>
 
 		class Data
@@ -162,9 +164,8 @@ C++ é uma linguagem de uso geral e já foi utilizada para diversas aplicações
 
 **Conclusão**
 
-C++ é uma das linguagens mais utilizadas do mundo, ocupando a 5° posição no ranking da Redmonk. Faz sucesso
-por ser uma linguagem multiparadigma e de uso geral. Um dos motivos para tal sucesso é a existência de várias
-possibilidades para resolver um determinado problema.
+C++ é uma das linguagens mais utilizadas do mundo. Faz sucesso por ser uma linguagem multiparadigma e de uso geral. 
+Um dos motivos para tal sucesso é a existência de várias possibilidades para resolver um determinado problema.
 
 https://en.wikipedia.org/wiki/C%2B%2B#Language
 https://www.quora.com/What-is-C++-used-for
