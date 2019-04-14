@@ -60,7 +60,7 @@ valores com dados imutáveis.
 * Orientada a objetos
 
 Programação Orientada a Objetos é um modelo de análise, projeto e programação de software baseado na composição e interação
-entre diversas unidades chamadas de 'objetos'.Os objetos são operados com o conceito de 'this' (isso) ou 'self' (si), de forma
+entre diversas unidades chamadas de 'objetos'. Os objetos são operados com o conceito de 'this' (isso) ou 'self' (si), de forma
 que seus métodos modifiquem os dados da própria instância. Exemplo: 
 
 	class Circle {         		// classname
@@ -71,15 +71,19 @@ que seus métodos modifiquem os dados da própria instância. Exemplo:
    		double getRadius(); 	// Member functions
    		double getArea();
 	}
+	
 * Estática
-Tipagem Estática é a capacidade de uma linguagem ajudar na segurança de tipos, onde, a partir do momento que uma linguagem
+
+Tipagem estática é a capacidade de uma linguagem ajudar na segurança de tipos, onde, a partir do momento que uma linguagem
 determina o tipo de uma variável esse tipo não pode ser alterado durante a compilação. Exemplo:
 
-	int num, sum; 
-	num = 5; 
-	sum = 10; 
-	sum = sum + num;
-
+	
+		int num, sum; 
+		num = 5; 
+		sum = 10; 	
+		sum = sum + num;
+	
+	
 A linguagem C++ foi projetada para suportar diversos paradigmas de programação, principalmente programação 
 estruturada e programação orientada a objetos, que permite ao programador escolher a melhor solução para um
 determinado problema. C++ é uma linguagem multiparadigmas por ter as características descritas acima. Outra característica 
