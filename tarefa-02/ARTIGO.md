@@ -31,18 +31,63 @@ Seguem abaixo todas as linguaguens que tiveram influencia na criação do C++:
 
 Podemos classificara linguagem C++ quanto aos seguintes aspectos:
 
-* Multi-paradigma
 * Procedural
+
+É um paradigma de programação baseado no conceito de chamadas a procedimento. Os procedimentos, também conhecidos como rotinas,
+subrotinas, métodos, ou funções simplesmente contêm um conjunto de passos computacionais a serem executados. Um dado
+procedimento pode ser chamado a qualquer hora durante a execução de um programa, inclusive por outros procedimentos ou por si 
+mesmo. Exemplo:
+
+	
+	double sqrt(double arg)
+	{
+  	// code for calculating a square root
+	}
+
+	void f()
+	{
+  	double root2 = sqrt(2);
+  	// ...
+	}
+
 * Funcional
+
+A programação funcional é um paradigma de programação que trata a computação como uma avaliação de funções matemáticas e que
+evita estados ou dados mutáveis. Ela enfatiza a aplicação de funções, em contraste da programação imperativa, que enfatiza
+mudanças no estado do programa. Enfatizando as expressões invés de comandos, as expressões são utilizados para calculo de 
+valores com dados imutáveis.
+
 * Orientada a objetos
+
+Programação Orientada a Objetos é um modelo de análise, projeto e programação de software baseado na composição e interação
+entre diversas unidades chamadas de 'objetos'.Os objetos são operados com o conceito de 'this' (isso) ou 'self' (si), de forma
+que seus métodos modifiquem os dados da própria instância. Exemplo: 
+
+	class Circle {         		// classname
+	private:
+   		double radius;      	// Data members (variables)
+   		string color;
+	public:   
+   		double getRadius(); 	// Member functions
+   		double getArea();
+	}
 * Estática
+Tipagem Estática é a capacidade de uma linguagem ajudar na segurança de tipos, onde, a partir do momento que uma linguagem
+determina o tipo de uma variável esse tipo não pode ser alterado durante a compilação. Exemplo:
+
+	int num, sum; 
+	num = 5; 
+	sum = 10; 
+	sum = sum + num;
 
 A linguagem C++ foi projetada para suportar diversos paradigmas de programação, principalmente programação 
 estruturada e programação orientada a objetos, que permite ao programador escolher a melhor solução para um
 determinado problema. C++ é uma linguagem multiparadigmas por ter as características descritas acima. Outra característica 
 é a tipagem estática, ou seja, a verificação do tipo de dado é feita em tempo de compilação.
 
-**Comparação**
+**Avaliação comparativa com foco em expressividade**
+
+**Exemplos de códigos representativos**
 
 * Linguagem C                                       
 
@@ -69,8 +114,6 @@ Multiparadigma
     }
    
    **Nos casos acima a semântica é igual e a sintaxe diferente.**
-
-* Vantagens
 
 - Readability
 
@@ -144,23 +187,6 @@ uma vantagem para as demais linguagens.
         	 		void advance(); 
         };
 
-**Exemplos de códigos representativos**
-
-C++ é uma linguagem de uso geral e já foi utilizada para diversas aplicações, como na lista a seguir:
-
-- Microsoft Windows
-- Apple macOS
-- Beos
-- Solaris
-- Symbian
-- Mozilla Firefox e Thunderbird
-- Google.com
-- YouTube.com
-- Amazon.com
-- Twitter.com
-- Adobe (Photoshop, Image Ready, Illustrator e Premier)
-- Source Engine (Half-Life, Left 4 Dead, TF2, Counter-Strike)
-- Creation Engine (Skyrim, Fallout 4, Oblivion)
 
 **Conclusão**
 
