@@ -71,37 +71,36 @@ Multiparadigma
    **Nos casos acima a semântica é igual e a sintaxe diferente.**
 
 * Vantagens
-		#include <iostream>
 
-		class Data
-		{
-			int dia;
-			int mes;
-			int ano;
-			void escreve()
-			{
-				cout<<dia<<'/'<<mes<<'/'<<ano;
-			}
-			void le()
-			{
-				char barra1, barra2;
-				cin>>dia>>barra1>>mes>>barra2>>ano;	
-			}
+- Readability
+
+		#include <iostream>
+		using namespace std;
+
+		class Rectangle {
+    				int width, height;
+  			public:
+    				void set_values (int,int);
+    				int area() {return width*height;}
 		};
 
-		main()
-		{
-			Data d={1,12,2000};
-			d.escreve();
-			d.le();
-			d.escreve();
-			return 0;
+		void Rectangle::set_values (int x, int y) {
+  			width = x;
+  			height = y;
 		}
 
-No código acima temos a implementação de uma classe que pega datas e imprime as mesmas. Em c++ esta implementação é melhor
-organizada do que na linguagem C. Isso faz com que se entenda o código mais facilmente.
+		int main () {
+  			Rectangle rect;
+  			rect.set_values (3,4);
+  			cout << "area: " << rect.area();
+  			return 0;
+		}
 
-- A classe "clock" é definida da seguinte maneira: 
+No código acima temos a implementação de uma classe que recebe a altura e comprimento de um retângulo e imprime a área. 
+Na linguagem C++ esta implementação é estruturada de uma forma melhor do que na linguagem C. Isso faz com que se entenda o
+código mais facilmente.
+
+- Herança Múltipla: 
 
 
 		class clock
@@ -146,6 +145,7 @@ uma vantagem para as demais linguagens.
         };
 
 **Exemplos de códigos representativos**
+
 C++ é uma linguagem de uso geral e já foi utilizada para diversas aplicações, como na lista a seguir:
 
 - Microsoft Windows
@@ -164,10 +164,16 @@ C++ é uma linguagem de uso geral e já foi utilizada para diversas aplicações
 
 **Conclusão**
 
-C++ é uma das linguagens mais utilizadas do mundo. Faz sucesso por ser uma linguagem multiparadigma e de uso geral. 
+C++ é uma das linguagens mais utilizadas do mundo. Seu sucesso se dá por ser uma linguagem multiparadigma e de uso geral. 
 Um dos motivos para tal sucesso é a existência de várias possibilidades para resolver um determinado problema.
 
+**Fontes**
+
 https://en.wikipedia.org/wiki/C%2B%2B#Language
+
 https://www.quora.com/What-is-C++-used-for
+
 https://www.mycplus.com/featured-articles/top-10-applications-written-in-c-cplusplus/
+
+http://www.cplusplus.com/doc/tutorial/classes/
 
