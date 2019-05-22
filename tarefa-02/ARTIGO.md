@@ -123,34 +123,33 @@ Multiparadigma
 
 Permite a existência de vários métodos de mesmo nome, porém com assinaturas levemente diferentes ou seja variando no número , tipo de argumentos , no valor de retorno e até variáveis diferentes. Ficará a cargo do compilador escolher de acordo com as listas de argumentos os procedimentos ou métodos a serem executados. Na linguagem C isso não é permitido, portanto um código similar não compilaria.
 
-#include <iostream>
+	#include <iostream>
 
-// volume of a cube
-int volume(const int s)
-{
-    return s*s*s;
-}
+	// volume of a cube
+	int volume(const int s)
+	{
+    	return s*s*s;
+	}
 
-// volume of a cylinder
-double volume(const double r, const int h)
-{
-    return 3.1415926*r*r*static_cast<double>(h);
-}
+	// volume of a cylinder
+	double volume(const double r, const int h)
+	{
+    	return 3.1415926*r*r*static_cast<double>(h);
+	}
 
-// volume of a cuboid
-long volume(const long l, const int b, const int h)
-{
-    return l*b*h;
-}
+	// volume of a cuboid
+	long volume(const long l, const int b, const int h)
+	{
+   	 return l*b*h;
+	}
 
-int main()
-{
-    std::cout << volume(10);
-    std::cout << volume(2.5, 8);
-    std::cout << volume(100, 75, 15);
+	int main()
+	{
+    	std::cout << volume(10);
+    	std::cout << volume(2.5, 8);
+    	std::cout << volume(100, 75, 15);
 
-    return 0;
-}
+    	return 0;	}
 
 
 - Readability
