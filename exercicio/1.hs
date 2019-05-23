@@ -10,7 +10,7 @@ folhas Folha       = 1
 folhas (Galho e d) = (folhas e) + (folhas d)
 
 altura :: Arvore -> Int
-altura Folha       = 1
+altura Folha       = 0
 altura (Galho e d) = if (altura e) > (altura d) 
                      then 
                         (altura e) + 1 
