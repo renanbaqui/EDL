@@ -10,18 +10,16 @@ folhas Folha       = 1
 folhas (Galho e d) = (folhas e) + (folhas d)
 
 altura :: Arvore -> Int
-altura Folha = 0
-altura (Galho d e) = if (folhas d > folhas e) then (1 + altura d)
-                     else (1 + altura e)
+altura Folha       = 1
+altura (Galho e d) = if (altura e) > (altura d) 
+                     then 
+                        (altura e) + 1 
+                     else 
+                        (altura d) + 1
 
 espelho :: Arvore -> Arvore
-espelho Folha = Folha
-espelho (Galho d e) = Galho (espelho e) (espelho d)
+espelho Folha       = Folha
+espelho (Galho e d) = (Galho d e)
 
 
--- main = putStrLn("\n A1 = " ++ (show a1) ++ 
-                "\n A2 = " ++ (show a2) ++ 
-                "\n A3 = " ++ (show a3) ++
-                "\n Folhas A1 = " ++ (show (folhas a1)) ++ 
-                "\n Altura A2 = " ++ (show (altura a2)) ++ 
-"\n Espelho A3 = " ++ (show (espelho a3)))
+main = print (espelho a3)
