@@ -1,54 +1,65 @@
 data Arvore = Folha Int | Galho Arvore Arvore
     deriving Show
 
-a1 = Galho (Galho (Folha 10) (Folha 20)) (Galho (Folha 30) (Folha 40))
-a2 = Galho (Galho (Galho (Folha 5) (Folha 15)) (Folha 25)) (Folha 35)
-a3 = Galho (Folha 100) (Galho (Galho (Folha 120) (Folha 140)) (Galho (Folha 160) (Folha 180)))
+arvore1 = Galho (Galho (Folha 4) (Folha 6)) (Galho (Folha 8) (Folha 9))
 
 folhas :: Arvore -> Int
-folhas (Folha _)   = 1
+folhas (Folha _ )  = 1
 folhas (Galho e d) = (folhas e) + (folhas d)
 
 altura :: Arvore -> Int
-altura (Folha _)   = 1
-altura (Galho e d) = if (altura e) > (altura d) 
-                        then 
-                            (altura e) + 1 
-                        else 
-                            (altura d) + 1
+altura (Folha _ )  = 0
+altura (Galho e d) = 
+    if (altura e) > (altura d) 
+        then (altura e) + 1
+    else 
+        (altura d) + 1
 
 espelho :: Arvore -> Arvore
 espelho (Folha v)   = (Folha v)
-espelho (Galho e d) = (Galho d e)
+espelho (Galho e d) = Galho (espelho d) (espelho e)
 
 soma :: Arvore -> Int
-soma (Folha v)   = v
+soma (Folha v)     = v
 soma (Galho e d) = (soma e) + (soma d)
 
 dobra :: Arvore -> Arvore
-dobra (Folha v)         = (Folha (2*v))
-dobra (Galho e d) = (Galho (dobra e) (dobra d))
+dobra (Folha v)    = Folha (2*v)
+dobra (Galho e d)  = Galho (dobra e) (dobra d)
 
 possui :: Arvore -> Int -> Bool
-possui (Folha v) i   = i == v
-possui (Galho e d) i = (possui e i) || (possui d i)
+possui (Folha v) value   = v == value
+possui (Galho e d) value = (possui e value) || (possui d value)
 
-maximo_bin :: Arvore -> Int
-maximo_bin (Folha v)   = v
-maximo_bin (Galho e d) = if x > y then 
-                            x
-                           else
-                            y
-                           where
-                            x = (maximo_bin e)
-                            y = (maximo_bin d)
+--possui_bin :: Arvore -> Int -> Bool (WIP) 
+--(dúvida: é possível tomar proveito dessa implementação de árvore no algoritmo de possui_bin?) 
 
-insere_bin :: Arvore -> Int -> Arvore
-insere_bin (Folha v) a   =  if v > a then 
-                                Galho (Folha a) (Folha v)
-                            else
-                                Galho (Folha v) (Folha a)
-insere_bin (Galho e d) a = Galho e (insere_bin d a)
+maximo :: Arvore -> Int
+maximo (Folha v)     = v
+maximo (Galho e d)   = 
+    case d of
+        (Folha value) -> value
+        _             -> (maximo d)
 
+insere :: Arvore -> Int -> Arvore
+insere (Folha v) value   =
+    if (v>value)
+        then Galho (Folha value) (Folha v)
+    else
+        Galho (Folha v) (Folha value)  
+insere (Galho e d) value = 
+    if (maximo d) > value
+        then Galho (insere e value) d
+    else
+        Galho e (insere d value)
 
-main = print (insere_bin a2 2)
+main = do
+    (print (soma arvore1))
+    (print (dobra arvore1))
+    (print (possui arvore1 8))
+    (print (folhas arvore1))
+    (print (altura arvore1))
+    (print (espelho arvore1))
+    --(print (possui_bin arvore1 5)) WIP
+    (print (maximo arvore1))
+    (print (insere arvore1 4))
