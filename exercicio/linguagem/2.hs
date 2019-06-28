@@ -1,3 +1,5 @@
+-- 7, 8 e 10
+
 data Exp = Num Int
          | Add Exp Exp
          | Sub Exp Exp
