@@ -1,4 +1,4 @@
--- 1-6
+-- 1, 2, 3, 4, 5 e 6
 
 data Exp = Num Int
          | Add Exp Exp
